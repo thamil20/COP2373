@@ -1,0 +1,49 @@
+Technical Design Document Template
+---
+Name: Tyler Hamilton
+Date Created: 8-20-2024
+---
+Program Description:
+This program is designed to simulate the responses of a Magic 8 Ball.
+---
+Logical Steps:
+1. Create a file to hold the 8-ball responses for later use.
+2. Write a list of responses into the file.
+3. Open the file in read mode to read the lines of the file into a list.
+4. Start a loop that repeats until the user decides to quit.
+5. Prompt the user to ask a question that can be answered by yes or no.
+6. Validate the user does not wish to quit.
+7. Validate the user typed a question.
+8. Randomly display a response to the user's question.
+---
+Variables:
+1. file: Temporary variable to hold file objects.
+2. magic_8_ball_responses: This list variable is used to hold any list
+of responses to be displayed after being asked a question.
+3. line: Temporary variable to create a list of responses from the file.
+4. running: Boolean variable to turn the loop off when the user types
+quit.
+5. user_question: Prompt the user to ask a question and store it here.
+6. response: Store a random response from the list of 8-ball responses.
+---
+Functions:
+1. Function Name: create_responses_file
+Description: This function is designed to create a file containing a
+list of possible Magic 8 Ball responses.
+Parameters: None
+Returns: None
+
+2. Function Name: read_responses_file
+Description: A function designed to create a list by reading the lines
+of a file containing Magic 8 Ball responses.
+Parameters: None
+Returns: list: The list of responses that a Magic 8 Ball would use.
+
+3. Function Name: get_answers
+Description: A function designed to prompt a user to ask a yes or no
+question which will be answered by one of the responses within the
+list returned from read_responses.
+Parameters: magic_8_ball_responses (list): A list containing responses
+a Magic 8 Ball would use.
+---
+Link to repository: https://github.com/thamil20/COP2373
