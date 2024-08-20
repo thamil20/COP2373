@@ -1,0 +1,36 @@
+Technical Design Document Template
+---
+Name: Tyler Hamilton
+Date Created: 8-15-2024
+---
+Program Description:
+This program recursively sells a set amount of pre-sale cinema tickets.
+---
+Logical Steps:
+1. Define a function to create a while loop until all tickets are sold.
+2. Prompt the user to input an integer between 1 and 4, inclusive.
+3. Check if the user input is between 1 and 4, inclusive.
+4. Check if there are more than 0 tickets remaining.
+5. Display the amount of remaining tickets and repeat the loop.
+6. After the while loop ends, the amount of buyers is displayed.
+---
+Variables:
+1. AVAILABLE_TICKETS:  The amount of tickets available at the
+beginning of the pre-sale.
+2. remaining_tickets: The amount of tickets remaining after each
+purchase.
+3. num_buyers: A counting variable used to count how many people
+purchased tickets.
+4. num_tickets: The integer input by the user to represent the amount
+of tickets they wish to purchase between 1 and 4, inclusive.
+---
+Functions:
+1. Function Name: ticket_pre_sale
+Description: This function recursively asks a user how many tickets they
+wish to buy until the number of remaining tickets is equal to zero.
+Parameters: tickets_available (int): The amount of tickets that are
+available at the beginning of the pre-sale.
+Returns: The function does not use a return statement, rather it prints
+out a sentence once finished computing.
+---
+Link to repository: https://github.com/thamil20/COP2373
