@@ -9,7 +9,9 @@ This program accepts an email as a string of text and displays a
 ---
 Logical Steps:
 1. Create a list of keywords or phrases that are flags for spam.
-2. Prompt the user for an email, passed in as a string of text.
+2. Prompt the user for an email, passed in as a multiline string,
+prompting the user to press Ctrl-D to end the while loop by
+forcing an EOFError.
 3. Iterate over every word or phrase in the spam list and add 1 to the
 "spam score" for every occurrence of a word or phrase in the list.
 4. Display the user's "spam score" and list of spam words to the
