@@ -9,9 +9,7 @@ This program accepts an email as a string of text and displays a
 ---
 Logical Steps:
 1. Create a list of keywords or phrases that are flags for spam.
-2. Prompt the user for an email, passed in as a multiline string,
-prompting the user to press Ctrl-D to end the while loop by
-forcing an EOFError.
+2. Prompt the user for an email, passed in as a string.
 3. Iterate over every word or phrase in the spam list and add 1 to the
 "spam score" for every occurrence of a word or phrase in the list.
 4. Display the user's "spam score" and list of spam words to the
@@ -22,13 +20,10 @@ Variables:
 2. counted_spam_flags: A list of words or phrases found
 within the given user_entry.
 3. spam_flags: A list of words or phrases that are known spam flags.
-4. contents: A temporary list of email contents provided by the user.
-5. line: A temporary string variable to hold each line in the contents
-while that line is being stored in contents.
-6. user_entry: A string containing the input from the user.
-7. user_score: An integer representing the user's spam score to later
+4. user_entry: A string containing the input from the user.
+5. user_score: An integer representing the user's spam score to later
 be printed to the user.
-8. user_flags: A list joined into a string of text to later print to
+6. user_flags: A list joined into a string of text to later print to
 the user.
 ---
 Functions:
