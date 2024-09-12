@@ -63,6 +63,10 @@ def main()->print:
     # integer variables respectively.
     user_flags, user_score = email_spam_score(spam_flags, user_entry)
 
+    # Display the percentage chance of the email being spam.
+    print('\nThe percentage of found spam words was '
+          f'{(user_score/len(spam_flags))* 100:.2f}%')
+
     # Display the user's spam score and flagged words or phrases in a
     # readable sentence.
     print(f'\nYour spam score is {user_score}/{len(spam_flags)} and the '
