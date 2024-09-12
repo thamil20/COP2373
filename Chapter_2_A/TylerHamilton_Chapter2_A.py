@@ -44,11 +44,43 @@ def email_spam_score(flags:list, email:str)->(list, int):
 def main()->print:
 
     # A list of words or phrases that are known to be spam flags.
-    spam_flags:list = ['Hello', 'for', 'you']
+    spam_flags:list = ['Debt Relief', 'Instant Access', 'Pure Profit',
+                       'Limited Time', 'Special Promotion',
+                       'Lowest Price', 'Best Price', 'Credit Card',
+                       'Dear Friend', 'ASAP', 'Madam', 'Free',
+                       'Lower Interest Rates', 'Click Here',
+                       'Own Boss', 'Join Millions', 'Extra Cash',
+                       'No Hidden Fees', 'Financial Freedom', 'At Risk',
+                       'Big Bucks', '$$$', 'Buy Direct', 'Call Free',
+                       'Increase Sales', 'Credit Repair', 'Biz'
+                       'New Customers Only', 'No Credit Check',
+                       'Meet Singles']
 
-    # Get an email to score from the user.
-    user_entry:str = str(input('Please enter the body of an email to '
-                               'score:\n'))
+    # Get an email to score from the user, allowing copy/paste of
+    # multiple lines of text.
+    print('Enter/Paste your content. Ctrl+D to save it.')
+
+    # A list that will contain the contents of the email, line by line.
+    contents = []
+
+    # Loop over the contents per line and add each line as a string to
+    # contents.
+    while True:
+
+        try:
+            # Try to get a line of input from the user
+            line = input()
+
+        except EOFError:
+            # Break from the while loop when there is an End of File
+            # Error (When the user presses Ctrl+D).
+            break
+
+        # Add each line to the contents list for each tried iteration.
+        contents.append(line)
+
+    # Join the list of contents, separated by a comma and a space.
+    user_entry = ', '.join(contents)
 
     # Save the flags and score returned from the entered email as list
     # integer variables respectively.
@@ -56,7 +88,7 @@ def main()->print:
 
     # Display the user's spam score and flagged words or phrases in a
     # readable sentence.
-    print(f'Your spam score is {user_score}/{len(spam_flags)} and the '
+    print(f'\nYour spam score is {user_score}/{len(spam_flags)} and the '
           f'words or phrases that were flagged are "{user_flags.lower()}"')
 
 if __name__ == '__main__':
