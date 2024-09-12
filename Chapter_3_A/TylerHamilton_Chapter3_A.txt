@@ -1,0 +1,22 @@
+Technical Design Document
+---
+Name: Tyler Hamilton
+Date Created: 9/12/2024
+---
+Program Description:
+This program accepts a list of monthly expenses and display the total
+expense, highest expense, and lowest expense.
+---
+Logical Steps:
+1.
+---
+Variables:
+1.
+---
+Functions:
+1. Function Name:
+Description:
+Parameters:
+Returns:
+---
+Link to repository: https://github.com/thamil20/COP2373
