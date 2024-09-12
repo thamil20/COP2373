@@ -1,0 +1,47 @@
+Technical Design Document
+---
+Name: Tyler Hamilton
+Date Created: 9/11/2024
+---
+Program Description:
+This program accepts an email as a string of text and displays a
+"spam score" based on how many keywords or phrases are present.
+---
+Logical Steps:
+1. Create a list of keywords or phrases that are flags for spam.
+2. Prompt the user for an email, passed in as a string of text.
+3. Iterate over every word or phrase in the spam list and add 1 to the
+"spam score" for every occurrence of a word or phrase in the list.
+4. Display the user's "spam score" and list of spam words to the
+terminal.
+---
+Variables:
+1. spam_score: An integer to count the occurrence of spam flags.
+2. counted_spam_flags: A list of words or phrases found
+within the given user_entry.
+3. spam_flags: A list of words or phrases that are known spam flags.
+4. user_entry: A string containing the input from the user.
+5. user_score: An integer representing the user's spam score to later
+be printed to the user.
+6. user_flags: A list joined into a string of text to later print to
+the user.
+---
+Functions:
+1. Function Name: email_spam_score
+Description: A function designed to return a spam score for a given
+email based on a predetermined list of spam flags.
+Parameters: flags (list): A list of spam flags to be used within the
+function.
+email (str): A string of text containing the body of an email to be
+scored.
+Returns: int: The integer representing the spam score of the given email,
+list: The list containing all words or phrases counted.
+
+2. Function Name: main
+Description: A function designed to run the functionality of the program
+when ran directly.
+Parameters: None
+Returns: None, prints the spam score and list of triggers based on a
+provided email and list of spam trigger words.
+---
+Link to repository: https://github.com/thamil20/COP2373
