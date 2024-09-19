@@ -8,15 +8,23 @@ This program accepts a list of monthly expenses and display the total
 expense, highest expense, and lowest expense.
 ---
 Logical Steps:
-1.
+1. Import the reduce function from functools.
+2. Prompt the user for a list of expenses requesting first the type of
+expense followed by the associated amount, separated by commas.
+3.
 ---
 Variables:
-1.
+1. user_expense: A temporary variable used to add the user input of
+their expenses to the dictionary.
 ---
 Functions:
-1. Function Name:
-Description:
-Parameters:
-Returns:
+1. Function Name: gather_expenses
+Description: This function will recursively prompt a user for a list of expenses
+requesting both amount and type of expense, all separated by commas,
+the input will be stripped of white space and stored in a dictionary.
+This continues until the user types "done".
+Parameters: None
+Returns: user_expense_dict (dict): The user input is returned as a dictionary
+with the type of expense as the key and the amount as the value.
 ---
 Link to repository: https://github.com/thamil20/COP2373
