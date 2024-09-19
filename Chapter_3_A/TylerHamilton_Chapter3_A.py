@@ -79,7 +79,9 @@ def gather_expenses() -> dict:
     return expense_dict
 
 
-
+# The main function is called when the program is run and gathers 
+# expenses and displays the highest and lowest expense and categories
+# as well as the total of all expenses.
 def main():
     
     # Gather the user's expenses using gather_expenses, returning a 

@@ -10,21 +10,67 @@ expense, highest expense, and lowest expense.
 Logical Steps:
 1. Import the reduce function from functools.
 2. Prompt the user for a list of expenses requesting first the type of
-expense followed by the associated amount, separated by commas.
-3.
+expense followed by the associated amount, separated by commas. 
+3. Check if the user typed quit to move on with the program, if they did
+then break from the while loop or if the incorrect format was used, 
+display the correct format.
+4. If the user entered correctly formatted input and did not type quit,
+check if the expense type is in the list of types, if not, add the
+type and amount to the end of their respective lists.
+5. If the expense type is in the list of types, iterate over the type list
+to find the existing index of the expense type and add the new amount to
+the old amount.
+6. Merge the lists of types and amounts into a dictionary and return to 
+later be used in a variable.
+7. Store a reduce function performing a lambda on the values of the 
+expense dictionary returning x if x is greater than y and returns y if y
+is greater than x.
+8. Store a reduce function performing a lambda on the values of the 
+expense dictionary returning x if x is less than y and returns y if y is 
+less than x. 
+9. Store a reduce function performing a lambda returning the addition of
+all values in the dictionary.
+10. Display the results.
 ---
 Variables:
-1. user_expense: A temporary variable used to add the user input of
+1. type_list (list): A list to hold all input categories of expenses
+corresponding to their amounts when input.
+2. amount_list (list): A list to hold all input amounts corresponding 
+to their categories when input.
+3. count (int): A variable to count the indexes of the types list.
+4. user_expense (str): A variable used to add the user input of
 their expenses to the dictionary.
+5. expense_type (str): A variable used to hold the type of expense once
+split.
+6. expense_amount (str): A variable used to hold the amount of the 
+expense once split.
+7. expense_dict (dictionary): A dictionary to hold the zip of the type 
+list and amount list.
+8. highest_expense (tuple): A variable to hold the result of the reduce 
+function after processing a lambda returning the greatest value of the 
+expense dict values in index 1 and their corresponding type in index 0.
+9, lowest_expense (tuple): A variable to hold the result of the reduce 
+function after processing a lambda returning the smallest value of the 
+expense dict values in index 1 and their corresponding type in index 0.
+10. total_expense (int): A variable to hold the result of the reduce 
+function after processing a lambda returing the total of all values in
+the expense dict.
 ---
 Functions:
 1. Function Name: gather_expenses
 Description: This function will recursively prompt a user for a list of expenses
 requesting both amount and type of expense, all separated by commas,
 the input will be stripped of white space and stored in a dictionary.
-This continues until the user types "done".
+This continues until the user types "quit".
 Parameters: None
-Returns: user_expense_dict (dict): The user input is returned as a dictionary
+Returns: expense_dict (dict): The user input is returned as a dictionary
 with the type of expense as the key and the amount as the value.
+
+2. Function Name: main
+Description: The main function is called when the program is run and gathers 
+expenses and displays the highest and lowest expense and categories
+as well as the total of all expenses.
+Parameters: None
+Returns: None
 ---
 Link to repository: https://github.com/thamil20/COP2373
