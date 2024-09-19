@@ -77,7 +77,7 @@ def main()->print:
 
     # Get an email to score from the user.
     user_entry = input('Please enter the text of an email in one line:\n')
-
+    time.sleep(3)
     # Save the flags and score returned from the entered email as list
     # integer variables respectively.
     user_flags, user_score = email_spam_score(spam_flags, user_entry)
