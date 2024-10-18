@@ -1,0 +1,65 @@
+Technical Design Document
+---
+Name: Tyler Hamilton
+Date Created: 10-17-2024
+---
+Program Description:
+This program takes phone numbers, social security numbers, and zip code 
+and ensures they are of the correct format.
+---
+Logical Steps:
+1. The user inputs a phone number.
+2. The user inputs a social security number.
+3. The user inputs a zip code.
+4. The phone number, social security number, and zip code are checked
+for validity using the three validation functions using hard-coded
+regular expressions to determine expected format.
+5. Any validated numbers are printed listed as validated inputs, if none 
+are valid, the program explains that none of the entered values are valid.
+---
+Variables:
+1. phone_number: A variable used to hold the phone number input by the 
+user.
+2. social_number: A variable used to hold the social security number 
+input by the user.
+3. zip_code: A variable used to hold the zip code input by the user.
+4. phone_val: A variable used to hold either the True or False value 
+returned by phone_validation
+5. social_val: A variable used to hold either the True or False value 
+returned by social_validation
+6. zip_val:A variable used to hold either the True or False value 
+returned by zip_validation
+---
+Functions:
+1. Function Name: phone_validation
+Description: This function validates phone numbers split by dashes
+and phone numbers all as one string of digits.
+Parameters: phone_number (str): A string of digits representing a phone 
+number to be validated is expected.
+Returns: This function either returns True if the given string matches 
+the expected format(s) and False if it does not match.
+
+2. Function Name: social_validation
+Description: This function validates social security numbers split by 
+dashes and soial security numbers all as one string of digits.
+Parameters: social_number (str): A string of digits representing a social
+security number to be validated is expected.
+Returns: This function either returns True if the given string matches 
+the expected format(s) and False if it does not match.
+
+3. Function Name: zip_validation
+Description: This function validates zip codes split by dashes and zip 
+codes all as one string of digits.
+Parameters: zip_code (str): A string of digits representing a zip code 
+to be validated is expected.
+Returns: This function either returns True if the given string matches 
+the expected format(s) and False if it does not match.
+
+4. Function Name: main
+Description: This function collects user input and runs it through its 
+respective validation function.
+Parameters: None
+Returns: This function does not have a return statement, rather it prints
+necessary information to the user in the console.
+---
+Link to repository: https://github.com/thamil20/COP2373
