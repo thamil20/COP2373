@@ -1,0 +1,28 @@
+Technical Design Document Template
+Name: [Your Name]  
+Date Created: [Date]
+
+Program Description: 
+[Provide a brief description of your program. Explain what the program does, its purpose, and any specific problem it solves.]
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: [Name of the function]  
+     Description: [Brief description of what the function does]  
+     Parameters: [List and describe the parameters the function takes in]  
+     Variables: [Name and description of the variables used in the function]
+     Logical Steps: [Describe the logical steps of your function]  
+     Returns: [Describe what the function returns]
+
+2. Function Name: [Name of the function]  
+     Description: [Brief description of what the function does]  
+     Parameters: [Name and type and describe the parameters the function takes in]  
+     Variables: [Name and type and description of the variables used in the function]
+     Logical Steps: [Describe the logical steps of your function]  
+     Returns: [Describe what the function returns]
+
+3. [Add more functions as needed]
+
+Logical Steps:
+1.	List the order in which your functions are called. 
+
+Link to your repository: https://github.com/thamil20/COP2373

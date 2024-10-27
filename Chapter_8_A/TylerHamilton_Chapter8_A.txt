@@ -1,0 +1,87 @@
+Technical Design Document
+Name: Tyler Hamilton  
+Date Created: 10/27/2024
+
+Program Description: 
+This program writes to and then reads from a provided csv file.
+
+Global Variables: file [str]: A variable used to hold a string containing
+                              the path of the file the user will work with.
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: get_info
+     Description: This function prompts the user to enter how many students,
+     their names, and their exam 1-3 scores and returns them in a dictionary. 
+     Parameters: None
+     Variables: num_students [int]: An integer used to repeat the program a 
+                                   certain number of times.
+                student_grades [list]: A list used to store the dictionary 
+                                      created on each iteration of num_students.
+                names [list]: a list containing the first and last names of 
+                              students.
+                scores [list]: a list containing exam scores 1, 2, and 3 of 
+                               each student.
+     Logical Steps: 1) Gather the number of students to be entered.
+                    2) Gather the names and scores of each student per iteration.
+                    3) Store the gathered data into dictionaries and append to a list.
+                    4) Return the list of dictionaries.
+     Returns: stored_grades [list]: A list of dictionaries of student 
+     names and related grades.
+
+2. Function Name: store_grades
+     Description: Stores the information entered about each student into a csv file.  
+     Parameters: None    
+     Variables: fields [list]: A list of strings to be written as the header.
+                student_grades [list]: A list used to store the dictionary 
+                                      created on each iteration of num_students.
+                grades [file object]: A variable used to contain the open file.
+                writer [DictWriter]: A dictionary writer object to write the 
+                                    dictionaries to the csv file.
+     Logical Steps: 1) Check if file exists, if so, call append_grades.
+                    2) If file does not exist, store the get_info function in
+                       student_grades
+                    3) Open the csv file as grades.
+                    4) Instantiate a writer object.
+                    5) Write the header of the csv.
+                    6) Write the returned names and scores into the csv file.
+
+     Returns: None
+
+3. Function Name: append_grades 
+
+     Description: An extra function to append grades to a pre-existing csv file.
+     Parameters: None
+     Variables: student_grades [list]: A list used to store the dictionary 
+                                      created on each iteration of num_students.
+                fields [list]: A list of strings to be written as the header.
+                grades [file object]: A variable used to contain the open file.
+                writer [DictWriter]: A dictionary writer object to write the 
+                                    dictionaries to the csv file.
+     Logical Steps: 1) Store the get_info function into student_grades.
+                    2) Open the csv file as grades.
+                    3) Instantiate a writer object.
+                    4) Append the returned names and scores into the csv file.
+     Returns: None
+
+4. Function Name: read_grades
+     Description: Reads the data within the csv file in a readable, tabular format.  
+     Parameters: None
+     Variables: grades [file object]: A variable used to contain the open file.
+                reader [_reader]: A dictionary reader object to read the data
+                                     from the csv file.
+                header [list]: A list containing the labels for each portion 
+                               of the csv file.
+                row [list]: A sublist of lists containing each piece of data 
+                            from the csv file. 
+     Logical Steps: 1) Open the csv file as grades.
+                    2) Instantiate a reader object.
+                    3) Get the header.
+                    4) Print the header joined together by | for formatting.
+                    5) Print each row joined together by | for formatting.
+     Returns: None
+
+Logical Steps:
+1.   The store_grades function is called which calls get_info for data.
+2.   The read_grades function is called which calls store_grades if no file is found.
+
+Link to your repository: https://github.com/thamil20/COP2373
