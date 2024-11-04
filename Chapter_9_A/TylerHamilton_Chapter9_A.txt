@@ -1,0 +1,96 @@
+Technical Design Document
+Name: Tyler Hamilton
+Date Created: 11/3/2024
+
+Program Description: 
+This program creates a bank account and allows deposits, withdraws, 
+interest rate changes, and calculating interest based on a set number 
+of days.
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: banking_test 
+     Description: Tests the functionality of all BankAcct methods.  
+     Parameters: None 
+     Variables: account [BankAcct]: A variable used to store an
+     instance of the BankAcct class.
+     Logical Steps:  1. After printing the account details via the 
+     __str__ method, deposit is called to add to the amount variable
+     in the test function.
+    2.  get_balance is called to print the current balance.
+    3.  Withdraw is called to subtract from the amount variable in the
+    test function.
+    4.  get_balance is called again to print the current balance.
+    5.  adjust_interest is called to change the interest_rate variable
+    in the test function.
+    6.  The account details are printed via the __str__ method.
+    7.  calculate_interest_by_days is called based on 30 days and prints
+    the result.
+    8.  The account details are printed via the __str__ method.
+     Returns: None
+
+2. Function Name: __init__  
+     Description: Creates class variables upon object instatiation.
+     Parameters: name [str]: The name of the user.
+     acct_num [int]: The account number related to the account.
+     amount [float]: The current balance of the account.
+     interest_rate [float]: A percentage to be used as an interest rate 
+     Variables: self.name: the object variable of the name parameter.
+     self.acct_num: the object variable of the acct_num parameter.
+     self.amount: the object variable of the amount parameter.
+     self.interest_rate: the object variable of the interest_rate parameter.
+     Logical Steps: None  
+     Returns: None
+
+3. Function Name: adjust_interest 
+     Description: Updates the interest rate based on a given new interest rate.
+     Parameters: self: the object variables from the __init__ method.
+     new_interest_rate [float]: a new interest rate to update the current interest rate. 
+     Variables: None
+     Logical Steps: 1. Update the current interest rate to the given new interest rate. 
+     Returns: None
+
+4. Function Name: withdraw 
+     Description: Withdraws a given amount from the current balance.
+     Parameters: self: the object variables from the __init__ method.
+     withdraw_amount [float]: an amount to subtract from the current balance. 
+     Variables: None
+     Logical Steps: 1. Check if withdraw_amount is less than or equal to the
+     current balance, if it is, subtract the withdraw amount from the current balance,
+     if not, tell the user they have insufficient funds.
+     Returns: None
+
+5. Function Name: deposit 
+     Description: Deposits a given amount into the current balance.
+     Parameters: self: the object variables from the __init__ method.
+     deposit_amount [float]: an amount to add to the current balance.
+     Variables: None
+     Logical Steps: 1. Add the deposit amount to the current balance. 
+     Returns: None
+
+6. Function Name: get_balance 
+     Description: Returns the current balance.
+     Parameters: self: the object variables from the __init__ method.
+     Variables: None
+     Logical Steps: None 
+     Returns: [float] self.amount
+
+7. Function Name: calculate_interest_by_days 
+     Description: Calculates the interest accrued based on a given number of days.
+     Parameters: self: the object variables from the __init__ method.
+     num_days [int]: a number of days used to calculate the interest accrued. 
+     Variables: None
+     Logical Steps: 1. Calculate the interest accrued over the given time period. 
+     Returns: [float] The interest accrued over the given time period.
+
+8. Function Name: __str__ 
+     Description: Returns a string to print if the class is printed.
+     Parameters: self: the object variables from the __init__ method.
+     Variables: None
+     Logical Steps: None 
+     Returns: [str] String listing current balance and interest rate.
+
+Logical Steps:
+1.	The test function is called to test the functionality of 
+the BankAcct class methods.
+
+Link to your repository: https://github.com/thamil20/COP2373
