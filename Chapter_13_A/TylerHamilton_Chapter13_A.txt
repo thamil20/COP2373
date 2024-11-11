@@ -1,0 +1,21 @@
+Technical Design Document
+Name: Tyler Hamilton
+Date Created: 
+
+Program Description: 
+
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: 
+     Description:   
+     Parameters: 
+     Variables: 
+     Logical Steps:  1. 
+     Returns: 
+
+
+
+Logical Steps:
+1.	
+
+Link to your repository: https://github.com/thamil20/COP2373

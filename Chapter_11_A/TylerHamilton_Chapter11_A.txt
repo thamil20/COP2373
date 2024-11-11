@@ -1,0 +1,73 @@
+Technical Design Document
+Name: Tyler Hamilton
+Date Created: 11/11/2024
+
+Program Description: 
+This program plays a game of Poker that allows the user to select cards to be 
+replaced, and displays the freshly drawn cards after the drawing phase.
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: main
+     Description: This function is used to run the program.
+     Parameters: None
+     Variables: choice (str): Whether or not the player wishes to play.
+                deck (Deck): A variable used to hold a Deck object.
+                num_cards_in_hand (int): The number of cards to be dealt 
+                per hand.
+                cards_in_hand_list (list): A list to hold all cards currently 
+                in hand.
+                card (int): A temporary variable to hold each card.
+                cards_to_exchange (str): A string containing the indexes of
+                the cards to exchange.
+                card_idx_to_exchange_list (list): a list to hold the integer
+                versions of string within cards_to_exchange after being split.
+     Logical Steps:  1. Ask the user if they wish to play or quit.
+                     2. Create a Deck object.
+                     3. Deal a number of cards based on num_cards_in_hand
+                     4. Print the results of the deal to the terminal.
+                     5. Ask the user which cards to exchange.
+                     6. Split the list of card indexes and turn them into integers.
+                     7. Remove the selected cards and replace them with new cards.
+                     8. Clear the list of card indexes to exchange.
+                     9. Print the results of the card exchange to the terminal.
+     Returns: None, prints a statement to the terminal.
+DECK CLASS:
+2. Function Name: __init__
+     Description: The initialization method for the Deck class.
+     Parameters: self, size (int): the size of the deck of cards (typically 52).
+     Variables: self.card_list (list): a list to hold the remaining cards in the deck.
+                self.cards_in_play_list (list): a list to hold cards currently in play.
+                self.discards_list (list):  a list to hold currently discarded cards.
+     Logical Steps: 1. Initializes all of the listed variables.
+                    2. Shuffle the card_list.
+     Returns: None
+3. Function Name: deal
+     Description: A method of the Deck class that allows cards to be dealt from
+     a deck.
+     Parameters: self
+     Variables: new_card (int): the card dealt from the deck.
+     Logical Steps: 1. Checks if the card list is empty.
+                    2. if so, shuffle the discards list and use that as the new card list.
+                    3. deal a new card from the deck and return it.
+     Returns: new_card (int): the card dealt from the deck.
+4. Function Name: new_hand
+     Description: A method of the Deck class that discards all cards in play.
+     Parameters: self
+     Variables: None
+     Logical Steps: 1. Put all cards in play into the discarded card list.
+     Returns: None
+
+
+Logical Steps:
+1. Call the main function.
+     {1. Ask the user if they wish to play or quit.
+     2. Create a Deck object.
+     3. Deal a number of cards based on num_cards_in_hand
+     4. Print the results of the deal to the terminal.
+     5. Ask the user which cards to exchange.
+     6. Split the list of card indexes and turn them into integers.
+     7. Remove the selected cards and replace them with new cards.
+     8. Clear the list of card indexes to exchange.
+     9. Print the results of the card exchange to the terminal.}
+
+Link to your repository: https://github.com/thamil20/COP2373
