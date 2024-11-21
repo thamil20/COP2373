@@ -1,21 +1,103 @@
 Technical Design Document
 Name: Tyler Hamilton
-Date Created: 
+Date Created: 11/18/2024
 
 Program Description: 
-
+This program loads and analyzes a given csv file as a numpy array.
 
 Functions used in the Program (list in order as they are called):
-1. Function Name: 
-     Description:   
-     Parameters: 
-     Variables: 
-     Logical Steps:  1. 
-     Returns: 
+1. Function Name: main
+     Description: This function is used to run the program.
+     Parameters: None
+     Variables: file (str): A variable to hold the file name the user inputs.
+                exam_data (numpy array): the data found within the given csv file
+                header: The first row (titles) of the exam_data.
+                means: A list to hold all means from the per_exam_calculations function.
+                medians: A list to hold all medians from the per_exam_calculations function.
+                stddevs: A list to hold all standard deviations from the per_exam_calculations function.
+                mins: A list to hold all minimums from the per_exam_calculations function.
+                maxs: A list to hold all maximums from the per_exam_calculations function.
+                all_exams: A list to hold the calculations from the all exams function.
+                exam_1_pass_percent: A float to hold the percentage of passing scores on exam 1.
+                exam_2_pass_percent: A float to hold the percentage of passing scores on exam 2.
+                exam_3_pass_percent: A float to hold the percentage of passing scores on exam 3.
+                all_pass_percentage: A float to hold the percentage of passing scores on all exams.
+     Logical Steps: 1. Get the file name of the csv file from the user.
+                    2. Import the data to a numpy array using import_data.
+                    3. Extract, print, and delete the header (titles of the columns).
+                    4. Format the data as integers.
+                    5. Calculate means, medians, stddevs, mins, and maxs using per_exam_calculations.
+                    6. Calculate mean, median, stddev, min, and max values across all exams using all_exam_calculations.
+                    7. Display each exam's mean, median, stddev, min, and max.
+                    8. Display the mean, median, stddev, min, and max across all exams.
+                    9. Calculate exam 1, 2, and 3's passing percentages using 3 iterations of pass_or_fail.
+                    10. Calculate the passing percentage across all exams.
+                    11. Display exam 1, 2, and 3's passing percentages.
+                    12. Display the passing percentage across all exams.
+     Returns: None
 
+2. Function Name: import_data
+     Description: This function is used to import the csv file into a numpy array.
+     Parameters: file (str): a csv file to be turned into a numpy array.
+     Variables: None
+     Logical Steps: 1. Generate and return a numpy array using the given file. 
+     Returns: numpy array containing the data from the csv file.
+
+3. Function Name: per_exam_calculations
+     Description: Calculate the means, medians, stddevs, minimums, and maximums of each exam.
+     Parameters: exam_data : a numpy array of data about exams.
+     Variables: means (int): The mean of each exam
+                medians (int): The median of each exam
+                stddevs (int): The standard deviation of each exam
+                minimums (int): The minimum of each exam
+                maximums (int): The maximum of each exam.
+     Logical Steps: 1. Store the mean of each exam in a list, means.
+                    2. Store the median of each exam in a list, medians.
+                    3. Store the standard deviation of each exam in a list, stddevs.
+                    4. Store the minimum of each exam in a list, minumums.
+                    5. Store the maximum of each exam in a list, maximums.
+     Returns: list: [means, medians, stddevs, minimums, maximums]
+
+4. Function Name: all_exam_calculations
+     Description: Calculate the mean, median, stddev, minimum, and maximum of all exams.
+     Parameters: exam_data : a numpy array of data about exams.
+     Variables: all_mean (int): The mean of all exams
+                all_median (int): The median of all exams
+                all_stddev (int): The standard deviation of all exams
+                all_mini (int): The minimum of all exams
+                all_maxi (int): The maximum of all exams.
+     Logical Steps: 1. Store the mean of all exams in a variable, all_mean.
+                    2. Store the median of all exams in a variable, all_median.
+                    3. Store the standard deviation of all exams in a variable, all_stddev.
+                    4. Store the minimum of all exams in a variable, all_mini.
+                    5. Store the maximum of all exams in a variable, all_maxi. 
+     Returns: list: [all_mean, all_median, all_stddev, all_mini, all_maxi]
+
+5. Function Name: pass_or_fail
+     Description: 
+     Parameters: exam_data : a numpy array of data about exams.
+                 exam_num (int): A number used to find which exam is to be analyzed.
+     Variables: count (int): a counter to count how many students passed.
+                score (int): Each exam grade in the list
+                pass_percent (float): The percentage of passing grades in the given exam number.
+     Logical Steps: 1. Iterate over the exam scores.
+                    2. Count each grade that is 60 or more.
+                    3. Calculate the percentage of passing scores.
+     Returns: pass_percent
+
+6. Function Name: overall_pass_percentage
+     Description: 
+     Parameters: exam_data : a numpy array of data about exams.
+     Variables: exam_1 (float): A variable to hold the return of pass_or_fail for exam 1
+                exam_2 (float): A variable to hold the return of pass_or_fail for exam 2
+                exam_3 (float): A variable to hold the return of pass_or_fail for exam 3
+                overall (float): The percentage of passing scores across all exams.
+     Logical Steps: 1. Calculate the pass_or_fail for each exam.
+                    2. Calculate the overall passing percentage.
+     Returns: overall
 
 
 Logical Steps:
-1.	
+1. Call the main function, which will run all other logical steps.
 
 Link to your repository: https://github.com/thamil20/COP2373
