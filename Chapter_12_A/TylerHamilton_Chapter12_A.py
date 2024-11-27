@@ -87,7 +87,7 @@ def main():
     # Format the data to be all integers.
     exam_data = np.delete(exam_data, [0,1], 1)
     exam_data = np.delete(exam_data, 0, 0)
-    exam_data = np.astype(exam_data, int)
+    exam_data = np.ndarray.astype(exam_data, int)
     
     # Save means, medians, standard deviations, minimums, and maximums in variables.
     means = per_exam_calculations(exam_data)[0]
@@ -143,3 +143,51 @@ def main():
 # Run the main function
 if __name__ == '__main__':
     main()
+    
+    # Edit - Changed np.astype() to np.ndarray.astype() in an attempt to allow my instructor to run the code
+    #        without receiving an error stating np.astype() does not exist.
+    
+    # Output did not change after the edit:
+    
+    # Please enter the name and extension of the file you wish to use (grades.csv): Chapter_12_A/grades.csv
+
+    # ---- Example Data ----
+
+    # First Name, Last Name, Exam 1, Exam 2, Exam 3
+    # Tyler, Hamilton, 15, 25, 90
+    # Danny, Phantom, 25, 16, 14
+    # Jimmy, Neutron, 90, 99, 100
+
+    # ---- Data Analysis ----
+
+    # Mean of exam 1: 68.60,
+    # Median of exam 1: 78.50,
+    # Standarad Deviation of exam 1: 28.65,
+    # Minimum of exam 1: 15.00,
+    # Maximum of exam 1: 100.00
+
+    # Mean of exam 2: 54.10,
+    # Median of exam 2: 56.00,
+    # Standarad Deviation of exam 2: 34.94,
+    # Minimum of exam 2: 1.00,
+    # Maximum of exam 2: 99.00
+
+    # Mean of exam 3: 82.20,
+    # Median of exam 3: 89.50,
+    # Standarad Deviation of exam 3: 24.08,
+    # Minimum of exam 3: 14.00,
+    # Maximum of exam 3: 100.00
+
+    # Mean of all exams: 68.30,
+    # Median of all exams: 82.50,
+    # Standarad Deviation of all exams: 31.71,
+    # Minimum of all exams: 1.00,
+    # Maximum of all exams: 100.00
+
+    # 70.0% of students passed exam 1.
+    # 50.0% of students passed exam 2.
+    # 90.0% of students passed exam 3.
+
+    # 70.00% of students passed across all exams.
+    
+    # End of Output
